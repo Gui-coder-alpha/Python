@@ -12,4 +12,4 @@ elif enter_a_value == "$":
     end = enter_a_number * 5.48
     print(f"O valor {enter_a_number}{enter_a_value} equivale a {round(end, 2)}R$")
 else:
-    print("Coloque um número válido")
+    print(f"[ERROR]Coloque o sinal correto[ERRor]")

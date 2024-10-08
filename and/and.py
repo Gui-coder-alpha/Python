@@ -6,3 +6,14 @@
 
 #Enquanto o and todas as condições devem ser true, or precisa que todas as condições
 #false para ser false, uma clara diferença
+
+x = 5
+if (5 < 8 and x == 5):
+    print("verdadeiro")
+else: 
+    print("falso")
+
+if (x > 8 or x == 5):
+    print("verdadeiro")
+else: 
+    print("falso")
