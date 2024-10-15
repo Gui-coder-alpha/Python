@@ -1,5 +1,5 @@
 #AND no python, deve ser usada como condição, neste caso o and deve ser true em todas as condições.
-#Caso uma seja falsa, o valor da condição se dá falsa
+#Caso uma seja falsa, o valor da condição se dá falsa. Pode-se colocar também nas repetições.
 
 #OR, diferente do and, também usada como condição, mas mesmo com um valor false
 #Ela não vai ter valor false, mas sim true, para ser false, todas as condições dever ser false.
