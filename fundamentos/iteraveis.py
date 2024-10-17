@@ -6,3 +6,6 @@ for number in numbers:
     print(number)
 
 print(numbers) #método sem o loop ativado, no qual fica inteiramente agrupado
+
+importado = "Example one"
+print(importado)
