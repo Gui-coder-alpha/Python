@@ -4,4 +4,4 @@
 
 import iteraveis
 
-print
+print(__numbers__)
