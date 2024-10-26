@@ -13,7 +13,7 @@ def poke_achou(name):
         pokemon_status = response.json()
         return pokemon_status
 
-pokemon = "mewtwo"
+pokemon = "clefairy"
 
 nome = poke_achou(pokemon)
 
@@ -22,6 +22,12 @@ if nome:
     print(f"{nome["height"]}")
     print(f"{nome["id"]}")
     print(f"{nome["types"]}")
-    tipo_pokemon = [tipo["type"]["name"] for tipo in nome["types"]]
-    print(tipo_pokemon)
+    tipo_pokemon = [tipo["type"]["name"] for tipo in nome["types"]] #Tipo está pegando informação do dicionário type
+    print(tipo_pokemon)                                             #no qual está pegando informação do dicionário
+    print("---------------------------------------")                #name, encontrando o tipo do pokemon.
+    
+    ability_poke = [abilidade["ability"]["name"] for abilidade in nome["abilities"]] #seleciona todas as informações
+    print(ability_poke)
+    habilidade_1 = nome["abilities"][0]["ability"]["name"]  #seleciona apenas 1 informação
+    print(habilidade_1)
 
