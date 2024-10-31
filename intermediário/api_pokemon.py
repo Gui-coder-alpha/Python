@@ -30,4 +30,7 @@ if nome:
     print(ability_poke)
     habilidade_1 = nome["abilities"][0]["ability"]["name"]  #seleciona apenas 1 informação
     print(habilidade_1)
-
+    base_stat = nome["stats"][0]["base_stat"]
+    print(base_stat)
+    all_stats = [estatus["base_stat"] for estatus in nome["stats"]]
+    print(all_stats)
