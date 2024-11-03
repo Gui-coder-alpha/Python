@@ -4,7 +4,7 @@ import json
 import requests
 
 api_use = "https://api.dictionaryapi.dev/api/v2/entries"
-word = "hello"
+word = "that"
 
 def achar(name):
     api_complete = f"{api_use}/en/{name}"
@@ -25,3 +25,4 @@ if encontrado:
     print(f"{encontrado[0]["meanings"][0]["definitions"][0]["definition"]}")
     print(f"{encontrado[0]["meanings"][1]["definitions"][0]["definition"]}")
     print(f"{encontrado[0]["meanings"][2]["definitions"][0]["definition"]}")
+    print(f"{encontrado[0]["meanings"][0]["synonyms"]}")
