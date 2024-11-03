@@ -4,7 +4,7 @@
 #do aprendizado sobre redes neurais, e
 #compreendendo mais sobre.
 #EStudar sobre:
-#Orientação a Objetos OOP
+#Orientação a Objetos POO
 #Estruturas de dados avançadas
 #Aprender bibliotecas como o TensorFlow, Keras, PyTorch entre outros
 #Usar APIs, aprender o mais rápido possível

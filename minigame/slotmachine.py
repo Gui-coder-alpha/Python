@@ -36,10 +36,3 @@ while comece == comece_comece:
         combination_2 = random.randint(caracteres_min, caracteres_max)
         combination_3 = random.randint(caracteres_min, caracteres_max)
         rede_of_combination = int(combination_1), int(combination_2), int(combination_3)
-
-
-
-
-
-
-
