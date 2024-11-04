@@ -3,7 +3,7 @@
 class banco:
     def __init__(self, saldo, titular):  #init está codificando os valores
         self.__saldo = saldo
-        self.titular = titular
+        self._titular = titular
 
     def depositar(self, valor_guardado):
         if valor_guardado > 0:
@@ -27,7 +27,7 @@ class banco:
         return self.__saldo
     
 
-    #def __str__(self):   mostra os valores de maneira mais agradável para visualizar
+    #def __str__(self):                 //mostra os valores de maneira mais agradável para visualizar//
         #return f"TITULAR: {self.titular}\nSALDO: {self.__saldo}"
     
 
@@ -51,4 +51,11 @@ conta_bancária.depositar(990)
 print(conta_bancária.ver_saldo())
 #print(conta_bancária)
 
-print(conta_bancária.ver_saldo())
+print(conta_bancária.ver_saldo())   #Com 2 __ ele codifica o valor, colocando desta
+                                    #maneira torna ele "visível", uma forma escrita.
+
+print(conta_bancária)               #Valor codificado do saldo, deve ser acessado
+                                    #pelo método acima, observando o valor
+
+print(conta_bancária._titular)  #somente com 1 _ ele é um tipo de alerta, que funciona apenas dentro da classe
+                                #, e não fora dela.
