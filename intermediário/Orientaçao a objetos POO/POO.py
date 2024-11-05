@@ -7,9 +7,10 @@
 #função.
 
 #herança, quando uma classe herda de outra classe, ela herda todos os atributos,
-#sendo reutilizável.
+#sendo reutilizável,
+#tendo uma classe central e outras do tipo "subclasse", para melhor entendimento
 
 #polimorfismo é os objetos responder de maneira diferente dentro de uma mesma classe, 
-#tendo uma classe central e outras do tipo "subclasse", para melhor entendimento
+#ou seja, cumpre várias tarefas em uma só classe
 
 #abstração é a simplificação, mostrando apenas o necessário, retirando a complexidade.
