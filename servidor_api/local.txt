@@ -1,0 +1,2 @@
+Pequeno servidor de teste de aoi, como api.
+Simples, mas funcional, futuramente haverá mudanças ou a implementação de um novo servidor
