@@ -1,4 +1,5 @@
 #teste com min heap
+#Uso: Implementação de filas de prioridade, algoritmos de seleção e heapsort.
 
 import heapq
 
