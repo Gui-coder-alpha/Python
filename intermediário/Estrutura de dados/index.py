@@ -1,10 +1,10 @@
 #Estrutura avançada de dados, como min heap e max heap.
 
 #Para redes neurais aprender
-#1. Matrizes Esparsas
-#Grafos Computacionais (Computational Graphs)
-#DataFrames
-#Árvore de Decisão e Florestas Aleatórias
-#Pilhas e Filas em Processamento de Dados
-#Tensores
+#3 Matrizes Esparsas
+#6 Grafos Computacionais (Computational Graphs)
+#2 DataFrames
+#7 Árvore de Decisão e Florestas Aleatórias
+#1 Pilhas e Filas em Processamento de Dados
+#4 Tensores
 #
