@@ -43,4 +43,24 @@ print("/////////////////////////////////////////")
 #Pivot table
 pivot = datas_frame.pivot_table(index = 'Idade', columns = 'Ano_Admissao', values = 'Salário', aggfunc = 'mean')
 print(pivot)
-print("/////////////////////////////////////////")    
+print("/////////////////////////////////////////")
+print('/////////////////////////////////////////')
+
+#Aprendendo a manipular dataframes
+datas_frame['Salário_dobrado'] = datas_frame['Salário'].apply(lambda x: x*2) #duplica o salário e adciona uma nova coluna salario dobrado
+print(datas_frame)
+print("/////////////////////////////////////////")
+
+datas_frame['Media_movel'] = datas_frame['Salário'].rolling(window = 2).mean() #media móvel
+#media movel pega os valores de window = x e faz a media dos x valores anteriores.
+print(datas_frame)
+print("/////////////////////////////////////////")
+
+datas_frame['comprimento_do_nome'] = datas_frame['Nome'].str.len() #comprimento do nome, simples
+print(datas_frame)
+print("/////////////////////////////////////////")
+
+# Agrupando por Ano de Admissão e calculando a média e a soma dos salários
+agrupamento_complexo = datas_frame.groupby('Ano_Admissao').agg({'Salário': ['mean', 'sum']})
+print(agrupamento_complexo)
+
