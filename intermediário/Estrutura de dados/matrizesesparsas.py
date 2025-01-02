@@ -40,3 +40,6 @@ Multiplicação = matriz1.dot(matriz2)
 print(Multiplicação)
 #em matriz fica
 print(Multiplicação.toarray())
+#somando
+somando = matriz1 + matriz2
+print(somando.toarray())
