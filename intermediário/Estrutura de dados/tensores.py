@@ -22,3 +22,17 @@ elemento = tensor[1, 1, 1] #acessa a matriz 1, na linha 1 e coluna 1
 print(elemento)
 elemento2 = tensor[2, 0, 2]#acessa a matriz 2, na linha 0 e coluna 2
 print(elemento2)
+print("//////")
+
+trasnposta = tensor.transpose(1, 0, 2)
+print(trasnposta)
+print("//////")
+
+#redução de dimensão de 1 tensor, somando um eixo específico, que é 0
+reduzir = np.sum(tensor, axis=0)
+print(reduzir)
+print("//////")
+
+#produto de tensor
+produto = np.dot(tensor, tensor)
+print(produto)
