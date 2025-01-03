@@ -13,4 +13,20 @@
 # w = a * y
 #basicamente criamos um gráfico onde temos um gráfico de entrada e um gráfico de saída
 #
-#
+#Colocando em prática
+import tensorflow as tf
+
+#estes são os nós
+x = tf.constant(2.0, name = 'x')
+y = tf.constant(3.0, name = 'y')
+w = tf.constant(4.0, name = 'w')
+
+#realizando operações de grafos
+a = tf.add(x, y, name = 'add')
+z = tf.multiply(a, w, name = 'multiplicação')
+
+#executando o grafo
+resultado = z.numpy()
+print(resultado)
+
+print(tf.__version__)
