@@ -1,26 +1,32 @@
+#criando um grafico computacional
+class Grafo:
+    def __init__(self):
+        self.grafo = {}
+    
+    def adicionar_vertice(self, vertice):
+        if vertice not in self.grafo:
+            self.grafo[vertice] = []
+    
+    def adicionar_aresta(self, vertice1, vertice2):
+        if vertice1 in self.grafo and vertice2 in self.grafo:
+            self.grafo[vertice1].append(vertice2)
+            self.grafo[vertice2].append(vertice1)
+
+    def exibir(self):
+        for vertice in self.grafo:
+            print(f"{vertice}: {self.grafo[vertice]}")
+
+acessando_grafo = Grafo()
+acessando_grafo.adicionar_vertice('A')
+acessando_grafo.adicionar_vertice('B')
+acessando_grafo.adicionar_vertice('C')
 
 
+acessando_grafo.adicionar_aresta('A', 'B')
+acessando_grafo.adicionar_aresta('B', 'C')
+acessando_grafo.adicionar_aresta('C', 'A')
 
-import tensorflow as tf
 
-# Definir os nós de entrada
-x = tf.constant(2.0, name='x')
-y = tf.constant(3.0, name='y')
-w = tf.constant(4.0, name='w')
+acessando_grafo.exibir()
 
-# Operações do grafo
-a = tf.add(x, y, name='add')
-z = tf.multiply(a, w, name='multiply')
-
-# Criar um writer para o TensorBoard
-writer = tf.summary.create_file_writer('logs/grafo')
-
-# Certifique-se de que o profiler esteja ativado e executado corretamente
-tf.summary.trace_on(graph=True, profiler=True)
-
-# Executar o grafo e obter o resultado
-with writer.as_default():
-    # Exportar o grafo para o TensorBoard antes de desativar o profiler
-    tf.summary.trace_export(name="grafo", step=0)
-    resultado = z.numpy()
-    print("Resultado:", resultado)
+#Este é um grafo não-diracional, ou seja, as arestas não tem uma direção, se conectando através de 2 vértices.
