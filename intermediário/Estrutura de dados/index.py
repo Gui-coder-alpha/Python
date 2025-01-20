@@ -2,7 +2,7 @@
 
 #Para redes neurais aprender
 #3 Matrizes Esparsas x
-#6 Grafos Computacionais (Computational Graphs)
+#6 Grafos Computacionais (Computational Graphs) X
 #2 DataFrames x
 #7 Árvore de Decisão e Florestas Aleatórias 
 #1 Pilhas e Filas em Processamento de Dados R x
