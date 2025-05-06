@@ -51,3 +51,30 @@ matriz_reordenada = matriz_original[[3, 0, 1, 2]] #Reordenando as linhas da matr
 print(matriz_reordenada)
 print("//////////////////////////////////////////////////////////")
 
+#Cálculo a distância pairwise, manipulção de array e broadcating
+vetor1 = np.array([10, 20, 30])
+vetor2 = np.array([5, 15, 25, 35])
+
+vetor1_coluna = vetor1[:,np.newaxis] #newaxis tem a função de transformar um vetor em uma coluna, ou seja vetor coluna, para vetor D1
+vetor2_linha = vetor2[np.newaxis,:] #newaxis tem a função de transformar um vetor em uma linha, ou seja vetor linha, para vetor D1
+
+diferença_absoluta = np.abs(vetor1_coluna - vetor2_linha)
+print(diferença_absoluta)
+print("//////////////////////////////////////////////////////////")
+
+#Operação de álgebra Linear
+matriz3 = np.array([[1, 2],
+                    [3, 4]])
+
+matriz4 = np.array([[5, 6],
+                    [7, 8]])
+
+produto_de_matriz = matriz3 @ matriz4
+inversa_da_matriz3 = np.linalg.inv(matriz3) #Invertendo a matriz
+inversa_da_matriz4 = np.linalg.inv(matriz4)
+
+determinante_da_matriz3 = np.linalg.det(matriz3) #Determinante da matriz
+determinante_da_matriz4 = np.linalg.det(matriz4) #Determinante da matriz
+print(determinante_da_matriz3)
+print(determinante_da_matriz4)
+#tudo nos conformes
