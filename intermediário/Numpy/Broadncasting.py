@@ -78,3 +78,19 @@ determinante_da_matriz4 = np.linalg.det(matriz4) #Determinante da matriz
 print(determinante_da_matriz3)
 print(determinante_da_matriz4)
 #tudo nos conformes
+print("//////////////////////////////////////////////////////////")
+
+#Simulação de passo de rede neural(foward pass simple)
+entrada = np.array([1, 2, 3]) # Vetor de entrada (forma (3,)),  estes são as entradas para os pesos somado ao bias
+pesos = np.array([[0.1, 0.2],
+                  [0.3, 0.4],
+                  [0.5, 0.6]]) # Matriz de pesos (forma (3, 2)) este aqui, é os neurônios, tal que as linhas são as entradas, e as colunas os neurônios
+bias = np.array([0.5, 1.0]) # Vetor de bias (forma (2,)) bias, para cada neurônio, tal que [0] e [1] para o primeiro e segundo neurônios respectivamente
+
+somatorio_ponderado = np.dot(entrada, pesos) #Está multiplicando as duas matrizes, entrada e os pesos, transformando em uma única matriz, que é 1x2, ou seja (,2)
+
+saida_total = somatorio_ponderado + bias #somando o valor da soma ponderada com o bias, tal que duas tem apenas uma linha e bias
+#NOTA: O bias deve ter a mesma quantidade que os neurônios, ou seja bias = quantidade de neurônios, sempre estão juntos, caso se diferem, ocorrerá erro.
+print(saida_total)
+#tudo nos conformes
+#Melhor conteúdo aprendido até agora, com numpy
