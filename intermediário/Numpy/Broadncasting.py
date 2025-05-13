@@ -51,7 +51,7 @@ matriz_reordenada = matriz_original[[3, 0, 1, 2]] #Reordenando as linhas da matr
 print(matriz_reordenada)
 print("//////////////////////////////////////////////////////////")
 
-#Cálculo a distância pairwise, manipulção de array e broadcating
+#Cálculo a distância pairwise, manipulação de array e broadcating
 vetor1 = np.array([10, 20, 30])
 vetor2 = np.array([5, 15, 25, 35])
 
