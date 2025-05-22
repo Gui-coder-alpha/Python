@@ -26,5 +26,23 @@ Together_operation_result = inversal_operation_one @ operation_two_with_the_targ
 print(Together_operation_result)
 
 
+#visualizar os dados resultantes com Matplotlib
+import matplotlib.pyplot as plt
+
+plt.scatter(features, target)
+
+#fórmula da equação linear é y = mx + b
+#separando a matriz together_operation_result
+
+m = Together_operation_result[0][0] #separados, não esquecer disso importante
+b = Together_operation_result[1][0]
+x = np.array([1, 2, 3, 4, 5, 6])
+
+y = m * x + b
+
+plt.scatter(features, target)
+plt.plot(x, y)
+plt.show()
+
 
 
