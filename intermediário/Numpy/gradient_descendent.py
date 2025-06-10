@@ -61,8 +61,28 @@ for i in range(iterations):
         print(f"Iteration {i}: {current_cost}")
     zero_parameters = new_zero_parameters
 
+
 print("\nTreinamento concluído!")
 print(f"Custo final: {cost[-1]:.4f}") # O ultimo custo da lista
 print(f"Parâmetros finais (m e b, respectivamente):\n{zero_parameters}")
 
 #criando um gráfico
+fig, axes = plt.subplots(1,2, figsize=(12,5), layout='constrained')
+axes[0].plot(cost)
+axes[0].set_title("Custo") #Título
+axes[0].set_xlabel("Iterações") #label X
+axes[0].set_ylabel("Custo MSE") #label Y
+axes[0].grid(True)
+
+axes[1].scatter(features, target, label='Dados Originais', color='blue', alpha=0.7) # Grafico de dispersao dos dados originais
+
+
+y_predicted_line = concatenationx @ zero_parameters
+
+axes[1].plot(features, y_predicted_line, color='red', label='Linha de Regressão GD', linewidth=2) # Plotar a linha
+axes[1].set_title('Regressão Linear com Gradiente Descendente') # Titulo
+axes[1].set_xlabel('Horas de Estudo') # Label X
+axes[1].set_ylabel('Nota na Prova') # Label Y
+axes[1].legend() # Mostrar legenda
+axes[1].grid(True) # Adicionar grade
+plt.show()
