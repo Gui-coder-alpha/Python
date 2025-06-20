@@ -19,7 +19,7 @@ zero_parameters = np.zeros((2,1)) #valor beta
 
 #hiperparametros do gradiente descendente
 learning_rate = 0.01
-iterations = 1000
+iterations = 100
 
 #função de custo
 def cost_function(concatenationx, zero_parameters, y):
