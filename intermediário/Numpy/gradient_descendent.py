@@ -21,7 +21,7 @@ zero_parameters = np.zeros((2,1)) #valor beta
 learning_rate = 0.01
 iterations = 100
 
-#função de custo
+#função de custo MSE
 def cost_function(concatenationx, zero_parameters, y):
     #parte 1/ calcular os valores
     y_with_hat = concatenationx @ zero_parameters #valor da matriz de x multiplciado pela matriz beta
