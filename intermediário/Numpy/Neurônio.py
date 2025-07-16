@@ -1,27 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#Criando o gradiente
-features = np.array([1.6, 2.3, 7.8, 1.2, 5.9, 9.0, 1.2, 5.7, 8.9, 9.1])
-target = np.array([0, 0, 1, 1, 1, 0, 0, 1, 0, 1])
+#Criando o gradiente                                                        # Dados brutos  |
+features = np.array([1.6, 2.3, 7.8, 1.2, 5.9, 9.0, 1.2, 5.7, 8.9, 9.1])     # Permanece fora|
+target = np.array([0, 0, 1, 1, 1, 0, 0, 1, 0, 1])                           # da classe     |
+features_designX = features[:,np.newaxis]                                   # Optimazation  |
+target_designY = target[:,np.newaxis]                                       #               |
+matrix_of_ones = np.ones((10,1))                                            #
+concatenationX = np.concatenate((features_designX, matrix_of_ones), axis=1) #
 
-features_designX = features[:,np.newaxis]
-target_designY = target[:,np.newaxis]
-matrix_of_ones = np.ones((10,1))
-concatenationX = np.concatenate((features_designX, matrix_of_ones), axis=1)
-beta_value = np.zeros((2,1))
+beta_value = np.zeros((2,1)) # Este dado deve ficar na classe, def __init__
 
-sum_ponderada_Z = concatenationX @ beta_value
-
-def function_sigmoid(sum_ponderada_Z):  
-    sigmoid = 1/(1 + np.exp(-sum_ponderada_Z))
-    return sigmoid
-
-sigmoid_result = function_sigmoid(sum_ponderada_Z)
 
 #Função BCE Binary Cross-Entropy, função de custo basicamente
-learning_rate = 0.01
-iterations = 1
+learning_rate = 0.01    # Independentes hiperparametros |
+iterations = 1          # Independentes_________________|
 
 #Fórmula é
 class Optmization(): 
@@ -40,6 +33,8 @@ class Optmization():
         sigmoid = 1/(1 + np.exp(-sum_ponderada_Z))
         return sigmoid
 
+    def sum_ponderada_Z(self):
+        sum_ponderada_Z = self.concatenationX @ self.beta_value
 
     def Binary_cost_function(self):
         #first step
@@ -59,6 +54,10 @@ class Optmization():
         bias_gradient = (1/len(self.features_designY)) * np.sum((self.sigmoid_result - self.features_designY))
         return weight_gradient, bias_gradient
     
+    def function_sigmoid(sum_ponderada_Z):  
+        sigmoid = 1/(1 + np.exp(-sum_ponderada_Z))
+        return sigmoid
+    
     def trainement(self,learning_rate,iterations):
         for i in range(iterations):
             sum_ponderada_Z_next = self.concatenationX @ self.beta_value
@@ -66,11 +65,11 @@ class Optmization():
             calculus_of_cost = self.Binary_cost_function(sigmoid_result_new)
             calculus_of_gradient = self.Gradient_descent(sigmoid_result_new)
             new_parameters = self.beta_value - learning_rate * calculus_of_gradient
-            self.cost.append(neqw_parameters)
+            self.cost.append(new_parameters)
         if i % (iterations // 10) == 0:
             print(f"Iteração {i}: Custo = {self.cost:.6f}")
             return self.beta_value, self.cost_history
 
-datas = Optmization(target_designY, sigmoid_result, concatenationX, learning_rate, iterations, beta_value, sum_ponderada_Z)
+datas = Optmization(target_designY, concatenationX, learning_rate, iterations, beta_value)
 print(datas.Binary_cost_function())
 
